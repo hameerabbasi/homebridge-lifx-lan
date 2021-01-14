@@ -173,7 +173,8 @@ function LifxLanPlatform(log, config, api) {
             messageHandlerTimeout:  this.config.messageHandlerTimeout || 2500,
             resendMaxTimes:         this.config.resendMaxTimes || 3,
             resendPacketDelay:      this.config.resendPacketDelay || 500,
-            address:                this.config.address || '0.0.0.0'
+            address:                this.config.address || '0.0.0.0',
+            lights:                 this.config.lights || []
         });
     }.bind(this));
 }
