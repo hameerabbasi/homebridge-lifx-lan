@@ -19,6 +19,7 @@
 //         "resendMaxTimes": 3,              // optional: resend packages x times if light did not receive a packet (for setting methods with callback)
 //         "debug": false,                   // optional: logs all messages in console if turned on
 //         "address": '0.0.0.0'              // optional: specify which ipv4 address to bind to
+//         "lights": []                      // optional: provide a list of known light IPv4 ip addresses
 //     }
 // ],
 //
@@ -173,7 +174,8 @@ function LifxLanPlatform(log, config, api) {
             messageHandlerTimeout:  this.config.messageHandlerTimeout || 2500,
             resendMaxTimes:         this.config.resendMaxTimes || 3,
             resendPacketDelay:      this.config.resendPacketDelay || 500,
-            address:                this.config.address || '0.0.0.0'
+            address:                this.config.address || '0.0.0.0',
+            lights:                 this.config.lights || []
         });
     }.bind(this));
 }
